@@ -1,0 +1,212 @@
+[
+  {
+    "id": "fever-general",
+    "title": "Fever — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "fever",
+    "content": "Fever is a temporary increase in body temperature, often due to illness such as viral or bacterial infection. Common accompanying symptoms include chills, sweating, headache, muscle aches, and weakness. Fever itself is usually not dangerous, but a fever above 39.5C (103F), a fever lasting more than 3 days, or fever with severe headache, stiff neck, confusion, difficulty breathing, or rash requires prompt medical attention. Rest and fluids are generally recommended for mild fever."
+  },
+  {
+    "id": "headache-general",
+    "title": "Headache — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "headache",
+    "content": "Headaches are commonly caused by dehydration, lack of sleep, stress, eye strain, or skipped meals. Tension headaches typically feel like pressure on both sides of the head. Migraines often involve throbbing pain, sensitivity to light, and nausea. Warning signs requiring urgent care include: sudden severe 'worst headache of life', headache with fever and stiff neck, headache after a head injury, or headache with confusion, vision loss, or weakness on one side."
+  },
+  {
+    "id": "cough-general",
+    "title": "Cough — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "cough",
+    "content": "Coughs are commonly caused by colds, flu, allergies, or irritants. A dry cough often accompanies viral infections. A productive cough with colored mucus may indicate bacterial infection. Warning signs requiring urgent care include: coughing up blood, cough with high fever and difficulty breathing, cough lasting more than 3 weeks, or cough with chest pain and shortness of breath."
+  },
+  {
+    "id": "diarrhea-general",
+    "title": "Diarrhea — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "diarrhea",
+    "content": "Diarrhea is often caused by viral or bacterial infection, food poisoning, or contaminated water. The main risk is dehydration, especially in children and the elderly. Oral rehydration with clean water and salts is important. Warning signs requiring urgent care include: blood in stool, signs of severe dehydration (very little urination, extreme thirst, dizziness), high fever, or diarrhea lasting more than 2 days in a child."
+  },
+  {
+    "id": "stomach-pain-general",
+    "title": "Abdominal/stomach pain — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "stomach pain",
+    "content": "Mild stomach pain is often related to indigestion, gas, constipation, or mild infection. Warning signs requiring urgent care include: severe pain that comes on suddenly, pain with fever and vomiting, pain that is worse in one specific area (especially lower right side, which can indicate appendicitis), inability to pass stool or gas, or pain following an injury."
+  },
+  {
+    "id": "skin-rash-general",
+    "title": "Skin rash — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "rash",
+    "content": "Rashes commonly result from allergic reactions, heat, insect bites, or mild infections. Most mild rashes resolve on their own or with basic care. Warning signs requiring urgent care include: rash that spreads rapidly, rash with fever, rash with facial or throat swelling and difficulty breathing (possible severe allergic reaction), painful blistering rash, or rash that looks like bruising and does not fade when pressed."
+  },
+  {
+    "id": "fatigue-general",
+    "title": "Fatigue / tiredness — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "fatigue",
+    "content": "Fatigue is commonly related to poor sleep, stress, dehydration, poor nutrition, or recovering from minor illness. Ongoing unexplained fatigue lasting several weeks, fatigue with unexplained weight loss, fatigue with shortness of breath, or fatigue with pale skin (possible anemia) should be evaluated by a healthcare provider."
+  },
+  {
+    "id": "joint-pain-general",
+    "title": "Joint pain — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "joint pain",
+    "content": "Mild joint pain is often related to overuse, minor injury, or common conditions like mild arthritis. Rest, gentle movement, and avoiding strain are commonly helpful for mild cases. Warning signs requiring urgent care include: joint that is hot, red, and severely swollen, joint pain with fever, inability to move or bear weight on the joint, or joint pain following a significant injury."
+  },
+  {
+    "id": "sore-throat-general",
+    "title": "Sore throat — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "sore throat",
+    "content": "Sore throats are commonly caused by viral infections, dry air, or allergies. Warm fluids and rest are commonly helpful. Warning signs requiring urgent care include: severe difficulty swallowing or breathing, drooling (especially in children), high fever with sore throat, or a sore throat lasting more than a week without improvement."
+  },
+  {
+    "id": "dizziness-general",
+    "title": "Dizziness — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "dizziness",
+    "content": "Dizziness is often related to dehydration, low blood sugar, standing up too quickly, or inner ear issues. Warning signs requiring urgent care include: dizziness with chest pain, sudden severe dizziness with vomiting, dizziness with slurred speech or weakness on one side (possible stroke warning signs), or fainting."
+  },
+  {
+    "id": "back-pain-general",
+    "title": "Back pain — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "back pain",
+    "content": "Most back pain is related to muscle strain from lifting, poor posture, or overuse, and improves with rest, gentle movement, and time. Warning signs requiring urgent care include: back pain with numbness or weakness in the legs, loss of bladder or bowel control, back pain following a fall or injury, or back pain with unexplained fever and weight loss."
+  },
+  {
+    "id": "ear-pain-general",
+    "title": "Ear pain — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "ear pain",
+    "content": "Ear pain in children is often caused by middle ear infection, common after a cold. In adults it can relate to infection, wax buildup, or jaw problems. Warning signs requiring urgent care include: severe pain with high fever, fluid or pus draining from the ear, sudden hearing loss, or swelling behind the ear."
+  },
+  {
+    "id": "eye-redness-general",
+    "title": "Eye redness / irritation — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "eye problems",
+    "content": "Mild eye redness is often caused by allergies, dryness, or minor irritation, and commonly improves with rest and avoiding rubbing. Warning signs requiring urgent care include: sudden vision loss or blurring, severe eye pain, redness with thick discharge, sensitivity to light with headache, or injury to the eye."
+  },
+  {
+    "id": "nausea-vomiting-general",
+    "title": "Nausea and vomiting — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "nausea",
+    "content": "Nausea and vomiting are commonly caused by food poisoning, viral infection, motion sickness, or overeating. Small sips of water and rest are commonly helpful. Warning signs requiring urgent care include: vomiting blood or dark material resembling coffee grounds, inability to keep any fluids down for over a day, severe abdominal pain, signs of dehydration, or vomiting after a head injury."
+  },
+  {
+    "id": "chest-tightness-mild",
+    "title": "Mild chest discomfort — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "chest discomfort",
+    "content": "Mild chest tightness can sometimes relate to muscle strain, anxiety, indigestion, or minor respiratory irritation. However, chest symptoms should always be treated cautiously. Any chest pain that is severe, crushing, spreads to the arm/jaw/back, comes with sweating, nausea, or shortness of breath should be treated as a possible emergency and evaluated immediately — this reference does not cover how to distinguish minor from serious chest symptoms reliably."
+  },
+  {
+    "id": "urinary-symptoms-general",
+    "title": "Urinary symptoms — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "urinary symptoms",
+    "content": "Burning during urination, frequent urination, or urgency are commonly associated with urinary tract infections, more common in women. Drinking more water can help mild cases. Warning signs requiring urgent care include: fever with back pain (possible kidney infection), blood in urine, inability to urinate, or symptoms in pregnant women, young children, or men (less typical and should be checked)."
+  },
+  {
+    "id": "toothache-general",
+    "title": "Toothache / dental pain — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "toothache",
+    "content": "Toothaches are commonly related to cavities, gum inflammation, or minor tooth sensitivity. Warning signs requiring urgent care include: severe swelling of the face or jaw, fever with tooth pain, difficulty swallowing or breathing, or pain following a dental injury — these may indicate a spreading infection needing prompt treatment."
+  },
+  {
+    "id": "muscle-strain-general",
+    "title": "Muscle strain / sprain — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "muscle injury",
+    "content": "Muscle strains and sprains commonly result from overexertion, sudden movement, or minor injury. Rest, gentle elevation, and avoiding strain on the area are commonly helpful for mild cases. Warning signs requiring urgent care include: inability to move the limb or bear weight, visible deformity, severe swelling, numbness, or pain that does not improve after several days of rest."
+  },
+  {
+    "id": "insect-bite-general",
+    "title": "Insect bites and stings — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "insect bites",
+    "content": "Most insect bites cause mild, localized redness, itching, and swelling that resolves within a few days. Warning signs requiring urgent care include: rapid swelling of the face, lips, or throat, difficulty breathing, widespread hives, dizziness or fainting after a bite/sting (possible severe allergic reaction/anaphylaxis), or signs of spreading infection such as increasing redness, warmth, and pus."
+  },
+  {
+    "id": "cold-flu-general",
+    "title": "Common cold and flu — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "cold and flu",
+    "content": "Common colds typically involve runny nose, mild cough, sneezing, and mild fatigue, improving within a week. Flu often causes more sudden onset of high fever, body aches, and stronger fatigue. Rest and fluids are commonly recommended. Warning signs requiring urgent care include: difficulty breathing, chest pain, persistent high fever, symptoms that improve then suddenly worsen, or symptoms in infants, elderly, or people with chronic conditions."
+  },
+  {
+    "id": "constipation-general",
+    "title": "Constipation — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "constipation",
+    "content": "Constipation is commonly related to low fiber intake, dehydration, low activity, or certain medications. Increasing water and fiber intake and gentle activity are commonly helpful. Warning signs requiring urgent care include: severe abdominal pain and bloating, vomiting, inability to pass gas, blood in stool, or constipation alternating with diarrhea lasting more than 2 weeks."
+  },
+  {
+    "id": "anxiety-stress-general",
+    "title": "Anxiety and stress-related symptoms — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "anxiety",
+    "content": "Stress and anxiety can cause physical symptoms including rapid heartbeat, sweating, restlessness, difficulty sleeping, and muscle tension. Rest, breathing exercises, and reducing stressors are commonly helpful for mild cases. If symptoms are severe, persistent, interfere with daily life, or include thoughts of self-harm, a healthcare provider or mental health professional should be consulted."
+  },
+  {
+    "id": "sleep-problems-general",
+    "title": "Sleep problems — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "sleep",
+    "content": "Difficulty sleeping is commonly related to stress, irregular schedules, caffeine, or screen use before bed. A regular sleep schedule and calming routine before bed are commonly helpful. Warning signs requiring evaluation include: chronic insomnia lasting several weeks, loud snoring with pauses in breathing, or sleep problems with significant mood changes or daytime impairment."
+  },
+  {
+    "id": "swelling-general",
+    "title": "Swelling (limbs/feet) — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "swelling",
+    "content": "Mild swelling in the feet or ankles can relate to standing for long periods, heat, or minor injury. Warning signs requiring urgent care include: sudden swelling in one leg with pain and warmth (possible blood clot), swelling with difficulty breathing or chest pain, swelling of the face or throat, or swelling with significant weight gain and shortness of breath (possible heart or kidney issue)."
+  },
+  {
+    "id": "allergic-reaction-general",
+    "title": "Allergic reactions — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "allergic reaction",
+    "content": "Mild allergic reactions commonly cause itching, mild rash, or sneezing, and can relate to food, pollen, dust, or medications. Warning signs requiring emergency care include: swelling of the face, lips, tongue, or throat, difficulty breathing or wheezing, widespread hives with dizziness, or rapid onset of symptoms after a known allergen exposure — this can indicate anaphylaxis, a life-threatening emergency."
+  },
+  {
+    "id": "menstrual-symptoms-general",
+    "title": "Menstrual symptoms — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "menstrual symptoms",
+    "content": "Cramping, mild mood changes, and fatigue are common during menstruation. Rest, warmth, and gentle activity are commonly helpful for mild cramps. Warning signs requiring evaluation include: extremely heavy bleeding (soaking through protection hourly), severe pain that prevents daily activities, irregular bleeding between periods, or missed periods with other symptoms."
+  },
+  {
+    "id": "pregnancy-symptoms-general",
+    "title": "Common pregnancy symptoms — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "pregnancy",
+    "content": "Common pregnancy symptoms include mild nausea, fatigue, and mild swelling. Regular prenatal checkups are important throughout pregnancy. Warning signs requiring urgent care include: severe abdominal pain, heavy vaginal bleeding, severe headache with vision changes, reduced fetal movement, high fever, or signs of severe swelling in the face and hands — these can indicate serious pregnancy complications needing immediate evaluation."
+  },
+  {
+    "id": "child-fever-general",
+    "title": "Fever in young children — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "child fever",
+    "content": "Fever in children is common with minor infections. Warning signs requiring urgent care in children include: fever in an infant under 3 months, fever above 40C (104F), fever lasting more than 3 days, fever with a rash that does not fade under pressure, difficulty breathing, unusual drowsiness or difficulty waking, refusal to drink fluids, or seizure. Children can dehydrate quickly, so fluid intake should be monitored closely."
+  },
+  {
+    "id": "weight-loss-general",
+    "title": "Unexplained weight loss — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "weight loss",
+    "content": "Unintentional weight loss without changes in diet or activity, especially if significant (more than 5% of body weight over a few months) or accompanied by fatigue, fever, or changes in appetite, should be evaluated by a healthcare provider, as it can relate to a range of underlying conditions that benefit from early assessment."
+  },
+  {
+    "id": "numbness-tingling-general",
+    "title": "Numbness or tingling — general information",
+    "source": "WHO patient information guidelines",
+    "topic": "numbness",
+    "content": "Mild, temporary numbness or tingling can result from sitting or sleeping in an awkward position, pressing on a nerve. Warning signs requiring urgent care include: sudden numbness or weakness on one side of the body, numbness with slurred speech or confusion (possible stroke warning signs), numbness after an injury, or numbness that is persistent, spreading, or affects the face."
+  }
+]

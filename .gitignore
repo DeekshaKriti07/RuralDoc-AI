@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.DS_Store
+dist/
+coverage/
+frontend/public/firstaid-videos/*.mp4

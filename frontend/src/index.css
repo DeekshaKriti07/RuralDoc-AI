@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; padding: 0; min-height: 100%; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+
+.rd-reveal-on-scroll { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.rd-reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+
+.rd-map .leaflet-popup-content-wrapper { border-radius: 14px; }
+.rd-map.dark .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.9) contrast(.9) saturate(.7); }
+@keyframes rd-user-pulse { 0% { transform: scale(.6); opacity: .8; } 100% { transform: scale(2.6); opacity: 0; } }
+.rd-user-dot { position: relative; width: 16px; height: 16px; }
+.rd-user-dot::before, .rd-user-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; }
+.rd-user-dot::before { background: #3b82f6; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.35); z-index: 2; }
+.rd-user-dot::after { background: #3b82f6; animation: rd-user-pulse 2s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) { .rd-reveal-on-scroll { opacity: 1; transform: none; transition: none; } .rd-user-dot::after { animation: none; } }
+:focus-visible {outline:3px solid #65e7b0;outline-offset:3px} @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
