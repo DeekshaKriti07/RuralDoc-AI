@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS users (id UUID PRIMARY KEY, name VARCHAR(120), email VARCHAR(255) NOT NULL UNIQUE, password_hash VARCHAR(255) NOT NULL, created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS medical_records (id UUID PRIMARY KEY, user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE, record_type VARCHAR(40) NOT NULL, title VARCHAR(255) NOT NULL, details TEXT, file_url VARCHAR(500), recorded_date DATE, created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE INDEX IF NOT EXISTS idx_records_user ON medical_records(user_id,created_at);
+CREATE TABLE IF NOT EXISTS medicine_reminders (id UUID PRIMARY KEY, user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE, medicine_name VARCHAR(255) NOT NULL, dosage VARCHAR(120), frequency VARCHAR(120), reminder_time TIME, times_per_day SMALLINT NOT NULL DEFAULT 1 CHECK(times_per_day BETWEEN 1 AND 255), start_date DATE, end_date DATE, created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE INDEX IF NOT EXISTS idx_reminders_user ON medicine_reminders(user_id,created_at);
+CREATE TABLE IF NOT EXISTS reminder_logs (id UUID PRIMARY KEY, reminder_id UUID NOT NULL REFERENCES medicine_reminders(id) ON DELETE CASCADE, scheduled_time TIMESTAMP, status VARCHAR(20) NOT NULL DEFAULT 'pending', logged_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE INDEX IF NOT EXISTS idx_logs_reminder ON reminder_logs(reminder_id,logged_at);
+CREATE TABLE IF NOT EXISTS symptom_check_sessions (id UUID PRIMARY KEY, user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE, input_text TEXT, source_language VARCHAR(10), ai_response JSONB, urgency_level VARCHAR(20), created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE INDEX IF NOT EXISTS idx_sessions_user ON symptom_check_sessions(user_id,created_at);
+CREATE TABLE IF NOT EXISTS chat_messages (id UUID PRIMARY KEY, user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE, conversation_id UUID NOT NULL, role VARCHAR(12) NOT NULL CHECK(role IN ('user','assistant')), content TEXT NOT NULL, created_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE INDEX IF NOT EXISTS idx_chat_conv ON chat_messages(conversation_id,created_at);
+CREATE INDEX IF NOT EXISTS idx_chat_user ON chat_messages(user_id);
+CREATE TABLE IF NOT EXISTS ai_audit_log (id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, user_id UUID, feature VARCHAR(30) NOT NULL, model_name VARCHAR(80), urgency_level VARCHAR(20), language VARCHAR(10), created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE INDEX IF NOT EXISTS idx_audit_time ON ai_audit_log(created_at);

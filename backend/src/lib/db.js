@@ -1,17 +1,14 @@
 require('dotenv').config();
-const mysql = require('mysql2/promise');
-
-const pool = mysql.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 100,
-  connectTimeout: 10000,
-  timezone: '+05:30',
-});
-
-module.exports = pool;
+const { Pool } = require('pg');
+const pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: true }, max: 5, connectionTimeoutMillis: 10000 });
+function rewrite(sql) {
+  let n = 0;
+  return sql.replace(/\?/g, () => `$${++n}`).replace(/CURDATE\(\)/gi, 'CURRENT_DATE');
+}
+module.exports = {
+  query: async (sql, params = []) => {
+    const result = await pool.query(rewrite(sql), params);
+    return [result.rows, result.fields];
+  },
+  end: () => pool.end(),
+};

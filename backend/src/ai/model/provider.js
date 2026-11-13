@@ -1,43 +1,27 @@
-const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://localhost:11434';
-const MODEL_NAME = process.env.AI_MODEL_NAME || 'gemma3:4b';
-// Vision uses the same model by default. Gemma 3 (4B and larger) can read images.
-// Set AI_VISION_MODEL_NAME to use a different one (for example "llava" or "qwen2.5vl").
-const VISION_MODEL = process.env.AI_VISION_MODEL_NAME || MODEL_NAME;
-
+const BASE = 'https://api.groq.com/openai/v1';
+const MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-20b';
+const VISION = process.env.GROQ_VISION_MODEL || '';
 class AIModelProvider {
-  // options: { temperature, json (force valid JSON), images (array of base64 strings), model, timeoutMs }
   async generate(prompt, options = {}) {
-    const model = options.images && options.images.length ? options.model || VISION_MODEL : options.model || MODEL_NAME;
-    const body = {
-      model,
-      prompt,
-      stream: false,
-      options: { temperature: options.temperature ?? 0.3, num_ctx: options.num_ctx || Number(process.env.AI_NUM_CTX || 4096), num_predict: Number(process.env.AI_NUM_PREDICT || 384) },
-    };
-    if (options.json) body.format = 'json';
-    if (options.images && options.images.length) body.images = options.images;
-    const response = await fetch(`${OLLAMA_BASE_URL}/api/generate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-      signal: AbortSignal.timeout(Math.min(options.timeoutMs || 90000, 90000)),
+    const images = options.images || [];
+    if (images.length && !VISION) throw new Error('Image analysis is not configured. Use text input.');
+    const model = images.length ? VISION : MODEL;
+    const content = images.length ? [
+      {type:'text',text:prompt},
+      ...images.map(img => ({type:'image_url',image_url:{url:`data:image/jpeg;base64,${img}`}}))
+    ] : prompt;
+    const response = await fetch(`${BASE}/chat/completions`, {
+      method:'POST',
+      headers:{'Authorization':`Bearer ${process.env.GROQ_API_KEY}`,'Content-Type':'application/json'},
+      body:JSON.stringify({model,messages:[{role:'user',content}],temperature:options.temperature ?? 0.3,max_completion_tokens:Number(process.env.AI_NUM_PREDICT || 384),...(options.json ? {response_format:{type:'json_object'}} : {})}),
+      signal:AbortSignal.timeout(Math.min(options.timeoutMs || 90000,90000))
     });
-    if (!response.ok) throw new Error(`Ollama generate failed: ${response.status}`);
+    if (!response.ok) throw new Error(`Groq API failed: ${response.status}`);
     const data = await response.json();
-    return { text: data.response, model };
+    return {text:data.choices?.[0]?.message?.content || '',model};
   }
-
   async healthCheck() {
-    try {
-      const response = await fetch(`${OLLAMA_BASE_URL}/api/tags`, { signal: AbortSignal.timeout(2000) });
-      if (!response.ok) return { available: false, model: null, runtime: null };
-      const data = await response.json();
-      const installed = (data.models || []).some((m) => m.name.startsWith(MODEL_NAME.split(':')[0]));
-      return { available: installed, model: installed ? MODEL_NAME : null, vision_model: VISION_MODEL, runtime: 'ollama' };
-    } catch {
-      return { available: false, model: null, runtime: null };
-    }
+    return {available:!!process.env.GROQ_API_KEY,model:process.env.GROQ_API_KEY?MODEL:null,vision_model:VISION || null,runtime:'groq',note:'Key configured; not a live inference test'};
   }
 }
-
 module.exports = new AIModelProvider();
